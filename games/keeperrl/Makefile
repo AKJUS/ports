@@ -4,6 +4,7 @@ COMMIT =	95d2be4e97db2243210a71918e36a533ad94dcd1
 COMMIT_DATE =	2025-10-27
 PKGNAME =	keeperrl-1.3
 DIST_TUPLE +=	github miki151 keeperrl ${COMMIT} .
+REVISION =	0
 
 CATEGORIES =	games x11
 HOMEPAGE =	https://keeperrl.com/

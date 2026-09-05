@@ -1,0 +1,16 @@
+Unbreak libcxx22 build
+Index: my_containers.h
+--- my_containers.h.orig
++++ my_containers.h
+@@ -333,6 +333,11 @@ class vector {
+       return *it;
+     }
+ 
++    decltype(auto) operator[] (difference_type n) const {
++      checkParent();
++      return it[n];
++    }
++
+     decltype(auto) operator-> () const {
+       checkParent();
+       return *it;
