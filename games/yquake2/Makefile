@@ -1,6 +1,6 @@
 COMMENT=	Yamagi Quake II
 N=		yquake2
-V=		8.60
+V=		8.70
 PKGNAME=	${N}-${V}
 DISTNAME=	quake2-${V}
 CATEGORIES=	games
@@ -17,18 +17,19 @@ COMPILER=	base-clang ports-gcc
 COMPILER_LANGS=	c
 
 # curl and openal are dlopen()'d
-WANTLIB += GL SDL2 c curl execinfo m openal
+WANTLIB += GL SDL3 c curl execinfo m openal
 
 # Libraries loaded with dlopen(3)
 # Extra: curl.26 openal.4
 LIB_DEPENDS=	audio/openal \
-		devel/sdl2 \
+		devel/sdl3 \
 		net/curl
 
 MAKE_ENV+=	VERBOSE=1
 USE_GMAKE=	Yes
 
-MAKE_FLAGS = config WITH_SYSTEMWIDE=yes WITH_SYSTEMDIR=${PREFIX}/share/${N}
+MAKE_FLAGS =	config PKG_CONFIG=pkg-config WITH_SYSTEMWIDE=yes \
+		WITH_SYSTEMDIR=${PREFIX}/share/${N}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/${N}

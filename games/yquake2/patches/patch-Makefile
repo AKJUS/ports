@@ -1,0 +1,22 @@
+Update INCLUDE and LDFLAGS for OpenBSD section to include ${X11BASE}
+Index: Makefile
+--- Makefile.orig
++++ Makefile
+@@ -368,7 +368,7 @@ INCLUDE ?= -I/usr/local/include
+ else ifeq ($(YQ2_OSTYPE),NetBSD)
+ INCLUDE ?= -I/usr/X11R7/include -I/usr/pkg/include
+ else ifeq ($(YQ2_OSTYPE),OpenBSD)
+-INCLUDE ?= -I/usr/local/include
++INCLUDE ?= -I${LOCALBASE}/include -I${X11BASE}/include
+ else ifeq ($(YQ2_OSTYPE),Windows)
+ INCLUDE ?= -I/usr/include
+ else ifeq ($(YQ2_OSTYPE),Darwin)
+@@ -385,7 +385,7 @@ LDFLAGS ?= -L/usr/local/lib
+ else ifeq ($(YQ2_OSTYPE),NetBSD)
+ LDFLAGS ?= -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib
+ else ifeq ($(YQ2_OSTYPE),OpenBSD)
+-LDFLAGS ?= -L/usr/local/lib
++LDFLAGS ?= -L${LOCALBASE}/lib -L${X11BASE}/lib
+ else ifeq ($(YQ2_OSTYPE),Windows)
+ LDFLAGS ?= -L/usr/lib
+ else ifeq ($(YQ2_OSTYPE),Darwin)

@@ -4,9 +4,6 @@
 bin/quake2
 lib/yquake2/
 share/doc/pkg-readmes/${PKGSTEM}
-share/yquake2/
-share/yquake2/baseq2/
-@so share/yquake2/baseq2/game.so
 @mode 750
 @owner _yquake2
 @group _yquake2
@@ -14,6 +11,9 @@ share/yquake2/baseq2/
 @mode
 @owner
 @group
+share/yquake2/
+share/yquake2/baseq2/
+@so share/yquake2/baseq2/game.so
 @bin share/yquake2/q2ded
 @bin share/yquake2/quake2
 @so share/yquake2/ref_gl1.so
