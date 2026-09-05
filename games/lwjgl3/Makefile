@@ -2,7 +2,7 @@ COMMENT =	lightweight game library for java
 
 ONLY_FOR_ARCHS= amd64 aarch64
 
-V =		3.3.3.0
+V =		3.3.3.1
 DISTNAME =	lwjgl3-${V}
 
 KOTLIN_V =	1.9.0
@@ -15,7 +15,6 @@ PKG_ARGS +=	-Dx86=0
 
 .if ${MACHINE_ARCH} == "aarch64"
 MAKE_ENV+=	LWJGL_BUILD_ARCH=arm64
-MAKE_ENV +=	ANT_OPTS="-Xmx1600M"
 .endif
 
 LWJGL3_HOME =	${PREFIX}/share/lwjgl3
