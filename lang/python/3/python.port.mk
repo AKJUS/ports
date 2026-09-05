@@ -223,7 +223,7 @@ MODPY_DISTUTILS_BUILD ?=	build --build-base=${WRKBUILD}
 MODPY_DISTUTILS_INSTALL ?=	install --prefix=${TRUEPREFIX} \
 				--root=${DESTDIR}
 
-MAKE_ENV +=		CC=${CC}
+MAKE_ENV +=		CC=${CC} CXX=${CXX}
 CONFIGURE_ENV +=	PYTHON="${MODPY_BIN}"
 .if ${CONFIGURE_STYLE:Mgnu}
 CONFIGURE_ENV +=	ac_cv_prog_PYTHON="${MODPY_BIN}" \
