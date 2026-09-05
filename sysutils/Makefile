@@ -163,6 +163,7 @@
      SUBDIR += idrac_exporter
      SUBDIR += incron
      SUBDIR += inotify-tools
+     SUBDIR += inxi
      SUBDIR += iogen
      SUBDIR += ioping
      SUBDIR += ipmitool
