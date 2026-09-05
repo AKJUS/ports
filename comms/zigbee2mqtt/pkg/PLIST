@@ -2812,7 +2812,6 @@ lib/node_modules/zigbee2mqtt/node_modules/smart-buffer/typings/
 lib/node_modules/zigbee2mqtt/node_modules/smart-buffer/typings/smartbuffer.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/smart-buffer/typings/utils.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/socks/
-lib/node_modules/zigbee2mqtt/node_modules/socks/.eslintrc.cjs
 lib/node_modules/zigbee2mqtt/node_modules/socks/.prettierrc.yaml
 lib/node_modules/zigbee2mqtt/node_modules/socks/LICENSE
 lib/node_modules/zigbee2mqtt/node_modules/socks/README.md
@@ -2851,7 +2850,7 @@ lib/node_modules/zigbee2mqtt/node_modules/socks/typings/client/socksclient.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/socks/typings/common/
 lib/node_modules/zigbee2mqtt/node_modules/socks/typings/common/constants.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/socks/typings/common/helpers.d.ts
-lib/node_modules/zigbee2mqtt/node_modules/socks/typings/common/receivebuffer.d.ts
+lib/node_modules/zigbee2mqtt/node_modules/socks/typings/common/receiveBuffer.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/socks/typings/common/util.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/socks/typings/index.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/split2/
@@ -4832,6 +4831,10 @@ lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/device
 lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/shyugj.d.ts.map
 lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/shyugj.js
 lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/shyugj.js.map
+lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siemens.d.ts
+lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siemens.d.ts.map
+lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siemens.js
+lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siemens.js.map
 lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siglis.d.ts
 lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siglis.d.ts.map
 lib/node_modules/zigbee2mqtt/node_modules/zigbee-herdsman-converters/dist/devices/siglis.js
