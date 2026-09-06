@@ -1,6 +1,7 @@
 COMMENT =	modal text editor
 
 VER =		25.07.1
+REVISION =        0
 DISTNAME =	helix-${VER}
 
 CATEGORIES =	editors
@@ -30,12 +31,10 @@ MODULES =	devel/cargo
 CONFIGURE_STYLE =	cargo
 SEPARATE_BUILD =	Yes
 
+MAKE_ENV += 	HELIX_DEFAULT_RUNTIME=${PREFIX}/share/helix/runtime
+
 pre-extract:
 	@mkdir -p ${WRKDIST}
-
-pre-configure:
-	grep -F -Rls '%%DATADIR%%' ${WRKSRC} | xargs sed -i \
-		's,%%DATADIR%%,${PREFIX}/share/helix,'
 
 do-install:
 	${INSTALL_PROGRAM} ${MODCARGO_TARGET_DIR}/release/hx ${PREFIX}/bin/
