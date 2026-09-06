@@ -3,7 +3,7 @@ COMMENT-qt5=	Qt5 interface to PDF rendering library
 COMMENT-qt6=	Qt6 interface to PDF rendering library
 COMMENT-utils=	PDF conversion tools and utilities
 
-V=		26.08.0
+V=		26.09.0
 DISTNAME=	poppler-$V
 CATEGORIES=	print
 PKGNAME-main=	poppler-$V
@@ -13,7 +13,7 @@ PKGNAME-qt6=	poppler-qt6-$V
 
 EXTRACT_SUFX=	.tar.xz
 
-SHARED_LIBS +=	poppler              105.0    # 163.0
+SHARED_LIBS +=	poppler              106.0    # 164.0
 SHARED_LIBS +=	poppler-glib         19.19    # 8.31
 SHARED_LIBS +=	poppler-qt5          9.3      # 1.40
 SHARED_LIBS +=	poppler-qt6          3.0      # 3.12
@@ -66,6 +66,7 @@ LIB_DEPENDS-main=${MODGCC4_CPPLIBDEP} \
 		converters/libiconv \
 		devel/gettext,-runtime \
 		devel/glib2 \
+		devel/harfbuzz \
 		graphics/cairo \
 		graphics/lcms2 \
 		graphics/openjp2 \
@@ -85,7 +86,8 @@ LIB_DEPENDS-utils=${MODGCC4_CPPLIBDEP} \
 
 WANTLIB-main=	${COMPILER_LIBCXX} \
 		cairo fontconfig freetype gio-2.0 glib-2.0 gobject-2.0 \
-		iconv intl jpeg lcms2 m openjp2 png tiff z
+		harfbuzz harfbuzz-subset iconv intl jpeg lcms2 m \
+		openjp2 png tiff z
 
 WANTLIB-qt5=	$(COMPILER_LIBCXX) Qt5Core Qt5Gui Qt5Xml freetype lcms2 \
 		m poppler
